@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniprojeto</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="search-box">
+            
+        <input type="text"  placeholder="Pesquisar" >
+        <box-icon name='search'></box-icon>
+        </div>
+    </header>
+    <main>
+        <section id="tarefas">
+          <h2>Tarefas <button onclick="novaTarefa()">Nova Tarefa</button></h2>
+          <h6>Nenhumas tarefa</h6> 
+        </section>
+        <section id="overlay"></section>
+        <div id="novatarefa" class="modal">
+            <h2>Nova Tarefa <box-icon style="cursor: pointer; color: blue;" onclick="fecharNovaTarefa()" name='x-circle'></box-icon></box-icon></h2>
+            <form id="formulario">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao"  required></textarea>
+                <button type="submit">Salvar</button>
+            </form>
+
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="index.js" defer></script>
+</body>
+</html>
