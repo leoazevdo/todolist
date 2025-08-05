@@ -8,6 +8,8 @@
     text-decoration: none;
     outline: none;
 }
+body {
+    background-color: #f0f0f0;
 
 header {
     background-color: blueviolet;
@@ -33,6 +35,8 @@ header input {
     padding: 0 10px;
     border: none;
     font-size: 16px;
+}
+
 }
 
 #tarefas {
@@ -71,6 +75,38 @@ header input {
     font-size: 24px;
     color: #666;
     margin-top: 20px;
+}
+
+#tarefas ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+#tarefas ul li {
+    width:calc(25% - 12px);
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#tarefas ul li h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+#tarefas ul li .actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+    cursor: pointer;
+    fill: #999;
+}
+#tarefas ul li .actions box-icon:hover {
+    fill: #7e2dc9;
+    transition: fill 200ms;
 }
 
 #overlay {
