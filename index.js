@@ -1,4 +1,4 @@
-function novaTarefa (){
+function abrirModal (){
  overlay.classList.add('active');
  novatarefa.classList.add('active');
 
@@ -34,4 +34,23 @@ function adicionarTarefa(listaDeTarefas) {
     })
   }
 }
-      
+  
+function novaTarefa (){
+  event.preventDefault();
+  let tarefa = {
+    titulo: formulario.titulo.value,
+    descricao: descricao.value
+  }
+  fetch ("http://localhost:3000/tarefas", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(tarefa)
+  })
+  .then(response => response.json())
+  .then (response => {
+  fecharNovaTarefa();
+  buscarTarefas();
+  })
+}

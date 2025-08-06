@@ -16,50 +16,23 @@
     </header>
     <main>
         <section id="tarefas">
-          <h2>Tarefas <button onclick="novaTarefa()">Nova Tarefa</button></h2>
+          <h2>Tarefas <button onclick="abrirModal()">Criar Tarefa</button></h2>
           <!--<h6>Nenhumas tarefa</h6-->
-            <ul id="lista">
-                <li>
+            <ul id="lista"> </ul>
+                <!--li>
                     <h5>Tarefa</h5>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
                     <div class="actions">
                         <box-icon name='trash' ></box-icon>
                     </div>
-                    
+                   --Essa li ficou de exemplo--
 
-                </li>
-                <li>
-                    <h5>Tarefa</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
-                    <box-icon name='trash' ></box-icon>
-                </li>
-                <li>
-                    <h5>Tarefa</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
-                    <box-icon name='trash' ></box-icon>
-                </li>
-                <li>
-                    <h5>Tarefa</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
-                    <box-icon name='trash' ></box-icon>
-                </li>
-                <li>
-                    <h5>Tarefa</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
-                    <box-icon name='trash' ></box-icon>
-                </li>
-                <li>
-                    <h5>Tarefa</h5>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
-                    <box-icon name='trash' ></box-icon>
-                </li>
-
-            </ul> 
+                </li-->    
         </section>
         <section id="overlay"></section>
         <div id="novatarefa" class="modal">
-            <h2>Nova Tarefa <box-icon style="cursor: pointer; color: blue;" onclick="fecharNovaTarefa()" name='x-circle'></box-icon></box-icon></h2>
-            <form id="formulario">
+            <h2>Criar tarefa <box-icon style="cursor: pointer; color: blue;" onclick="fecharNovaTarefa()" name='x-circle'></box-icon></box-icon></h2>
+            <form id="formulario" onsubmit="novaTarefa()">
                 <label for="titulo">Título</label>
                 <input type="text" id="titulo" name="titulo" required>
                 <label for="descricao">Descrição</label>
