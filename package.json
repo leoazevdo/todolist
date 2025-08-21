@@ -5,7 +5,7 @@
    "scripts": {
     "api": "node node_modules/json-server/lib/cli/bin.js --watch api.json --port $PORT --host 0.0.0.0"
   },
-  },
+  
   "author": "",
   "license": "ISC",
   "description": "",
