@@ -2,14 +2,14 @@
   "name": "mini_projeto_javascript",
   "version": "1.0.0",
   "main": "index.js",
-   "scripts": {
-    "api": "node node_modules/json-server/lib/cli/bin.js --watch api.json --port $PORT --host 0.0.0.0"
+  "scripts": {
+    "api": "json-server --watch api.json --port $PORT --host 0.0.0.0 & serve public -l $PORT"
   },
-  
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {          
-    "json-server": "^0.17.4"
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "serve": "^14.2.4"
   }
 }

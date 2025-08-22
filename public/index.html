@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniprojeto</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="search-box">
+            
+        <input type="text" id="busca" onkeyup="pesquisarTarefa()" placeholder="Pesquisar" >
+        <box-icon name='search'></box-icon>     
+        </div>
+    </header>
+    <main>
+        <section id="tarefas">
+          <h2>Tarefas <button onclick="abrirModal()">Criar Tarefa</button></h2>
+          <!--<h6>Nenhumas tarefa</h6-->
+            <ul id="lista"> </ul>
+                <!--li>
+                    <h5>Tarefa</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi odit accusamus nam laudantium corrupti quod. Distinctio perspiciatis et iste consequatur aperiam reprehenderit culpa laudantium dignissimos eligendi, consequuntur consectetur voluptate.</p>
+                    <div class="actions">
+                        <box-icon name='trash' ></box-icon>
+                    </div>
+                   --Essa li ficou de exemplo--
+
+                </li-->    
+        </section>
+        <section id="overlay"></section>
+        <div id="novatarefa" class="modal">
+            <h2>Criar tarefa <box-icon style="cursor: pointer; color: blue;" onclick="fecharNovaTarefa()" name='x-circle'></box-icon></box-icon></h2>
+            <form id="formulario" onsubmit="novaTarefa()">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao"  required></textarea>
+                <button type="submit">Salvar</button>
+            </form>
+
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="../public/index.js" defer></script>
+</body>
+</html>
