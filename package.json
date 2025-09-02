@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "api": "json-server --watch api.json --port $PORT --host 0.0.0.0 & serve public -l $PORT"
+    "api": "json-server --watch api.json --port 3000"
+    
   },
   "author": "",
   "license": "ISC",
